@@ -4,8 +4,8 @@ var connection = require("./connection.js");
 //ORM
 var orm = {
     //Methods
-    selectAll: function(tableInput, cb) {
-        var queryString = "SELECT * FROM " + tableInput + ";";
+    selectAll: function(cb) {
+        var queryString = "SELECT * FROM burgers;";
         connection.query(queryString, function(err, result) {
           if (err) {
             throw err;
@@ -13,8 +13,8 @@ var orm = {
           cb(result);
         });
       },
-    insertOne: function(tableInput, burger_name, cb) {
-        var queryString = "INSERT INTO " + tableInput + "( burger_name ) VALUES ( " + burger_name + ");";
+    insertOne: function(burger_name, cb) {
+        var queryString = "INSERT INTO burgers ( burger_name ) VALUES ( " + burger_name + ");";
         connection.query(queryString, function(err, result) {
             if (err) {
               throw err;
@@ -22,8 +22,8 @@ var orm = {
             cb(result);
           });
     },
-    updateOne: function(tableInput, id, cb) {
-        var queryString = "UPDATE " + tableInput + " SET devour = 0 WHERE id = " + id ";";
+    updateOne: function(id, cb) {
+        var queryString = "UPDATE burgers SET devour = 0 WHERE id = " + id ";";
         connection.query(queryString, function(err, result) {
             if (err) {
               throw err;
