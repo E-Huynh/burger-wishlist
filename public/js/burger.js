@@ -26,9 +26,19 @@ $(function () {
         }
     });
     //Handles the devour btn click
-    $(".devourBtn").on("click", function(event) {
+    $(".devourBtn").on("click", function (event) {
         event.preventDefault;
-        console.log("clicked devourBtn");
+        let btnId = $(this).data("id");
+        // console.log("clicked devourBtn ", btnId);
+        $.ajax("/api/devour/" + btnId, {
+            type: "PUT",
+        }).then(
+            function (response) {
+                console.log("PUT: ", response);
+                // Reload the page to get the updated list
+                location.reload();
+            }
+        );
     })
 
 });

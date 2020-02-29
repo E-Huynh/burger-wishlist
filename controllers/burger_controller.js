@@ -20,6 +20,13 @@ router.post("/api/add", function (req, res) {
         res.json(data);
     });
 });
+router.put("/api/devour/:id", function(req, res) {
+    let id = req.params.id;
+    console.log("id: ", id);
+    burger.update(id, function (data) {
+        res.json(data);
+    })
+})
 
 // Export routes for server.js to use.
 module.exports = router;
