@@ -15,6 +15,10 @@ router.get("/", function(req, res) {
       res.render("index", hbsObject);
     });
   });
+router.post("/api/add", function(req, res) {
+    let name = req.body.name;
+    console.log(`Burger name is ${name}`)
+  });
 
 // Export routes for server.js to use.
 module.exports = router;
