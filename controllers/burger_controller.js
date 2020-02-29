@@ -17,7 +17,10 @@ router.get("/", function(req, res) {
   });
 router.post("/api/add", function(req, res) {
     let name = req.body.name;
-    console.log(`Burger name is ${name}`)
+    console.log(`Burger name is ${name}`);
+    burger.insert(name, function(data) {
+        res.json(data);
+    });
   });
 
 // Export routes for server.js to use.
