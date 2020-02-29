@@ -11,13 +11,11 @@ router.get("/", function(req, res) {
       var hbsObject = {
         burger: data
       };
-      console.log(hbsObject);
       res.render("index", hbsObject);
     });
   });
 router.post("/api/add", function(req, res) {
     let name = req.body.name;
-    console.log(`Burger name is ${name}`);
     burger.insert(name, function(data) {
         res.json(data);
     });
