@@ -1,0 +1,45 @@
+<section class="section">
+    <div class="container has-background-info" id="todevour">
+        <h1 class="title">
+            Burgers to devour
+        </h1>
+        <p class="subtitle">
+            <ul>
+                {{#each burger}}
+                <li>
+                    {{this.burger_name}}
+                    <button data-id="{{this.id}}">Devour</button>
+                </li>
+                {{/each}}
+            </ul>
+        </p>
+    </div>
+</section>
+<section class="section">
+    <div class="container has-background-success" id="devoured">
+        <h1 class="title">
+            Devoured burgers
+        </h1>
+        <p class="subtitle">
+            <ul>
+                This is where devoured burgers go
+                {{#each burger}}
+                <li>
+                    {{this.burger_name}}
+                {{/each}}
+            </ul>
+        </p>
+    </div>
+</section>
+<section>
+    <div class="field is-grouped">
+        <p class="control">
+            <input class="input" type="text" placeholder="Burger name">
+        </p>
+        <p class="control">
+            <a class="button is-info">
+                Add
+            </a>
+        </p>
+    </div>
+</section>
