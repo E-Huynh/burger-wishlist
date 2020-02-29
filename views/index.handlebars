@@ -1,42 +1,38 @@
-<section class="section">
-    <div class="container has-background-info" id="todevour">
-        <h1 class="title">
-            Burgers to devour
-        </h1>
-        <p class="subtitle">
-            <ul>
-                {{#each burger}}
-                {{!-- goes through each line of the db and only shows if devour = 0 --}}
-                {{#unless this.devour}}
-                <li>
-                    {{this.burger_name}}
-                    <button data-id="{{this.id}}" class="devourBtn">Devour</button>
-                </li>
-                {{/unless}}
-                {{/each}}
-            </ul>
-        </p>
+<article class="message">
+    <div class="message-header">
+        <p>Burgers To Devour</p>
     </div>
-</section>
-<section class="section">
-    <div class="container has-background-success" id="devoured">
-        <h1 class="title">
-            Devoured burgers
-        </h1>
-        <p class="subtitle">
-            <ul>
-                {{#each burger}}
-                {{!-- goes through each line of the db and only shows if devour = 1 --}}
-                {{#if this.devour}}
-                <li>
-                    {{this.burger_name}}
-                </li>
-                {{/if}}
-                {{/each}}
-            </ul>
-        </p>
+    <div class="message-body" id="todevour">
+        <ul>
+            {{#each burger}}
+            {{!-- goes through each line of the db and only shows if devour = 0 --}}
+            {{#unless this.devour}}
+            <li>
+                {{this.burger_name}}
+                <button data-id="{{this.id}}" class="devourBtn">Devour</button>
+            </li>
+            {{/unless}}
+            {{/each}}
+        </ul>
     </div>
-</section>
+</article>
+<article class="message">
+    <div class="message-header">
+        <p>Burgers Devoured</p>
+    </div>
+    <div class="message-body" id="todevour">
+        <ul>
+            {{#each burger}}
+            {{!-- goes through each line of the db and only shows if devour = 1 --}}
+            {{#if this.devour}}
+            <li>
+                {{this.burger_name}}
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+</article>
 <section>
     <form class="create-form">
         <div class="field is-grouped">
