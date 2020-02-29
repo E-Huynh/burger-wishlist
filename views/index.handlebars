@@ -1,49 +1,62 @@
-<article class="message">
-    <div class="message-header">
-        <p>Burgers To Devour</p>
+<div class="columns">
+    <div class="column is-two-fifths">
+        <article class="message is-success">
+            <div class="message-header">
+                <p>Burgers To Devour</p>
+            </div>
+            <div class="message-body" id="todevour">
+                <ul>
+                    {{#each burger}}
+                    {{!-- goes through each line of the db and only shows if devour = 0 --}}
+                    {{#unless this.devour}}
+                    <li>
+                        {{this.burger_name}}
+                        <button data-id="{{this.id}}" class="devourBtn">Devour</button>
+                    </li>
+                    {{/unless}}
+                    {{/each}}
+                </ul>
+            </div>
+        </article>
     </div>
-    <div class="message-body" id="todevour">
-        <ul>
-            {{#each burger}}
-            {{!-- goes through each line of the db and only shows if devour = 0 --}}
-            {{#unless this.devour}}
-            <li>
-                {{this.burger_name}}
-                <button data-id="{{this.id}}" class="devourBtn">Devour</button>
-            </li>
-            {{/unless}}
-            {{/each}}
-        </ul>
+    <div class="column is-one-fifth">
+        Burger.png
     </div>
-</article>
-<article class="message">
-    <div class="message-header">
-        <p>Burgers Devoured</p>
+    <div class="column is-two-fifths">
+        <article class="message is-danger">
+            <div class="message-header">
+                <p>Burgers Devoured</p>
+            </div>
+            <div class="message-body" id="todevour">
+                <ul>
+                    {{#each burger}}
+                    {{!-- goes through each line of the db and only shows if devour = 1 --}}
+                    {{#if this.devour}}
+                    <li>
+                        {{this.burger_name}}
+                    </li>
+                    {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
+        </article>
     </div>
-    <div class="message-body" id="todevour">
-        <ul>
-            {{#each burger}}
-            {{!-- goes through each line of the db and only shows if devour = 1 --}}
-            {{#if this.devour}}
-            <li>
-                {{this.burger_name}}
-            </li>
-            {{/if}}
-            {{/each}}
-        </ul>
+</div>
+<div class="columns is-centered">
+    <div class="column is-half has-background-light">
+        <p class="bd-notification is-primary">
+            <form class="create-form">
+                <div class="field is-grouped">
+                    <p class="control is-expanded">
+                        <input class="input" id="burger" type="text" placeholder="Burger name">
+                    </p>
+                    <p class="control">
+                        <button type="submit" class="button addBtn is-info">
+                            Add
+                        </button>
+                    </p>
+                </div>
+            </form>
+        </p>
     </div>
-</article>
-<section>
-    <form class="create-form">
-        <div class="field is-grouped">
-            <p class="control">
-                <input class="input" id="burger" type="text" placeholder="Burger name">
-            </p>
-            <p class="control">
-                <button type="submit" class="button addBtn is-info">
-                    Add
-                </button>
-            </p>
-        </div>
-    </form>
-</section>
+</div>
