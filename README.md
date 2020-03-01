@@ -22,6 +22,8 @@ A user can type a burger name into the input box and click add. The burger name 
   * MVC (Model View Controller)
   * MySQL
   * ORM (Object-Relational Mapping)
+## Addition Features and Known Bugs
+  * Add a clear all button to delete all burgers in the devoured list.
 ## Challenges & Accomplishments
 The most challenging part of this project was setting up the file structure for the MVC and ensureing everything was connected properly. It really help to cement what each file was contributing and how they all linked together.
 ## Images
