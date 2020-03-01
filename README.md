@@ -22,6 +22,8 @@ A user can type a burger name into the input box and click add. The burger name 
   * MVC (Model View Controller)
   * MySQL
   * ORM (Object-Relational Mapping)
+  * [Heroku](https://afternoon-headland-29975.herokuapp.com/)
+  * [JAWSDB MYSQL](https://elements.heroku.com/addons/jawsdb)
 ## Addition Features and Known Bugs
   * Add a clear all button to delete all burgers in the devoured list.
 ## Challenges & Accomplishments
