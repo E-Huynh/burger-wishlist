@@ -25,5 +25,5 @@ A user can type a burger name into the input box and click add. The burger name 
 ## Challenges & Accomplishments
 The most challenging part of this project was setting up the file structure for the MVC and ensureing everything was connected properly. It really help to cement what each file was contributing and how they all linked together.
 ## Images
-
+![Functionality Gif](https://github.com/E-Huynh/burger-wishlist/blob/master/public/assets/Burger%20Wishlist%20GIF.gif?raw=true)
 
