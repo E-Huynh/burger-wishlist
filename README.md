@@ -10,7 +10,7 @@ Erik.W.Huynh@Gmail.com
 
 [LinkedIn](https://www.linkedin.com/in/erik-huynh-228321196/)
 
-[Portfolio](https://e-huynh.github.io/updated_portfolio/)
+[Portfolio](https://e-huynh.github.io/portfolio-gram/)
 
 ## Project Description
 This app allows a user to track burger that they wish to devour. A user can type in any burger they wish to add it to the list. When they have eaten the burger it can be sent to the devoured list by clicking the devour button. 
